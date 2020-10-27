@@ -13,7 +13,10 @@ public class CasaDeEventos {
      * atender los eventos*/
     private int aforoMáximo;/**Capacidad máxima de personas que el 
      * salón puede recibir*/
-    
+    //Atributos de Composición
+    private PlazoletaDeComidas restaurante;
+    private EquipoDeDecoracion eventoPrincipal; 
+            
     public CasaDeEventos(
             String direccion, 
             int cantidadDeEmpleados, 
@@ -25,7 +28,27 @@ public class CasaDeEventos {
         this.fechasReservadas = fechasReservadas;
         this.estaFuncionando = estaFuncionando;
         this.aforoMáximo = aforoMáximo;
+        this.restaurante = restaurante;
+        this.eventoPrincipal = new EquipoDeDecoracion(
+                "Boda",
+                "Federico Lagos",
+                30,
+                "Dj Blue",
+                true,
+                true,
+                18,
+                "Catering Pamela y Asociados");
     }
+
+    public PlazoletaDeComidas getCentroDeComidas() {
+        return this.restaurante;
+    }
+
+    public void setCentroDeComidas(PlazoletaDeComidas sectorA) {
+        this.restaurante = sectorA;
+    }
+    
+    
     
     /**Este método tiene la función de cambiar 
      * la dirección de la casa de eventos y aumentar en 20 la 

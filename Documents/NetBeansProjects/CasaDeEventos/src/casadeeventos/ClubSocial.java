@@ -16,7 +16,7 @@ public class ClubSocial extends CasaDeEventos{
             Date fechasReservadas, 
             Boolean estaFuncionando,
             int aforoMáximo,
-            int numeroDePersonas,
+            int numeroDePersonas, 
             boolean piscina,
             int diasReservados) {
         super(
